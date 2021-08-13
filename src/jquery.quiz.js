@@ -132,6 +132,8 @@
           currentQuestionIndex = currentQuestion - 1,
           correct = questions[currentQuestionIndex].correctIndex;
 
+        $('.active-question [data-index="' + correct + '"]').addClass('correct');
+
         if (selected === correct) {
           $answerEl.addClass('correct');
           response = questions[currentQuestionIndex].correctResponse;
