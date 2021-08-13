@@ -72,6 +72,11 @@
         $.each(questions, function(i, question) {
           quizHtml += '<div class="question-container">';
           quizHtml += '<p class="question">' + question.q + '</p>';
+
+          if ( question.image ) {
+            quizHtml += '<p class="question-image"><img src="' + question.image + '" alt="' + question.q + '"></p>'
+          }
+
           quizHtml += '<ul class="answers">';
           $.each(question.options, function(index, answer) {
             quizHtml += '<li><a href="#" data-index="' + index + '">' + answer + '</a></li>';
