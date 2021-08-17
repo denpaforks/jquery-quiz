@@ -73,8 +73,8 @@
           quizHtml += '<div class="question-container">';
           quizHtml += '<p class="question">' + question.q + '</p>';
 
-          if ( question.image ) {
-            quizHtml += '<p class="question-image"><img src="' + question.image + '" alt="' + question.q + '"></p>'
+          if ( typeof question.image !== 'undefined' ) {
+            quizHtml += '<p class="question-image"><img src="' + question.image + '" alt="' + question.q + '"></p>';
           }
 
           quizHtml += '<ul class="answers">';
